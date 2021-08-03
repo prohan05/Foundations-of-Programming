@@ -4,9 +4,8 @@ def new_division(dividend, divisor):
     # Repetitive substraction as follows
     if divisor != 0:
         while dividend >= divisor:
-            if divisor != 0:
-                dividend = dividend - divisor
-                quotient += 1
+            dividend = dividend - divisor
+            quotient += 1
         remainder = dividend
         print('Quotient: ', quotient)
         print('remainder: ', remainder)
