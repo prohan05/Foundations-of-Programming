@@ -1,14 +1,15 @@
 # This is written in Python3
 def new_division(dividend, divisor):
     quotient = 0
-    # Repetitive substraction as follows
     if divisor != 0:
+# Repetitive substraction as follows
         while dividend >= divisor:
             dividend = dividend - divisor
             quotient += 1
         remainder = dividend
         print('Quotient: ', quotient)
         print('remainder: ', remainder)
+# Divisor = 0 condition
     else:
         print('Division is not possible')
 
