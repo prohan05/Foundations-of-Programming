@@ -1,19 +1,27 @@
-# This is written in Python3
-def new_division(dividend, divisor):
+def division(dividend, divisor):
     quotient = 0
+    sign = 1
+    initial_dividend = dividend
+    # Division by zero
+    if divisor == 0:
+        print("Division not possible!")
+
+    # Inclusion of negative numbers
+    if divisor*dividend < 0:
+        sign = -1
+        divisor = abs(divisor)
+        dividend = abs(dividend)
+
+    # Division using repititive subtraction
     if divisor != 0:
-# Repetitive substraction as follows
         while dividend >= divisor:
-            dividend = dividend - divisor
+            dividend -= divisor
             quotient += 1
-        remainder = dividend
-        print('Quotient: ', quotient)
-        print('remainder: ', remainder)
-# Divisor = 0 condition
-    else:
-        print('Division is not possible')
+        print("When", initial_dividend, "is the dividend and", divisor, "is the divisor")
+        print("Quotient is ", quotient*sign)
+        print("Remainder is ", dividend)
 
 
-new_division(7, 3)
-new_division(14, 3)
-new_division(15, 0)
+division(15,2)
+division(15, -2)
+division(15, 0)
